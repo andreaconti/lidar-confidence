@@ -6,7 +6,7 @@ This repository collects the code and the final models used to study in our [pap
 
 |        Image        |      Lidar Depth           |         Lidar Depth Filtered       |
 | :-----------------: | :------------------------: | :--------------------------------: |
-| ![image](https://github.com/andreaconti/lidar-confidence/blob/main/resources/teaser/image.png) | ![lidar](https://github.com/andreaconti/lidar-confidence/blob/main/resources/teaser/lidar.png) | ![lidar confidence](https://github.com/andreaconti/lidar-confidence/blob/main/resources/teaser/lidar_filtered.png) |
+| ![image](https://github.com/andreaconti/lidar-confidence/blob/master/resources/teaser/image.png) | ![lidar](https://github.com/andreaconti/lidar-confidence/blob/master/resources/teaser/lidar.png) | ![lidar confidence](https://github.com/andreaconti/lidar-confidence/blob/master/resources/teaser/lidar_filtered.png) |
 
 ## Reproduce the experiments
 
