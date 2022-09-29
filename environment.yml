@@ -1,4 +1,4 @@
-name: lidar-confidence-test
+name: lidar-confidence
 channels:
     - pytorch
     - conda-forge
