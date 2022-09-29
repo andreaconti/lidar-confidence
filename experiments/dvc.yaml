@@ -1,0 +1,50 @@
+stages:
+  lce_train:
+    wdir: ..
+    cmd: python experiments/lce/train.py
+    deps:
+      - data/dataset
+      - experiments/lce/train.py
+      - experiments/lce/model.py
+    params:
+      - lce.epochs
+      - lce.batch_size
+      - lce.lr
+      - lce.head
+      - lce.depth_supervision
+      - lce.loss_fn
+    outs:
+      - results/lce/model.pth
+      - results/lce/wandb_info.json
+    metrics:
+      - results/lce/lce.json:
+          cache: false
+
+  generate_report:
+    wdir: ../notebooks
+    cmd: papermill report.ipynb ../results/report.ipynb --report-mode
+    deps:
+      - report.ipynb
+      - ../experiments/baselines/surface_geometry_model
+      - ../data/dataset
+      - ../results/lce/lce.json
+      - ../results/lce/model.pth
+      - ../results/baselines/ncnn_conf_l1.json
+      - ../results/baselines/ncnn_conf_l1_kitti_limited.json
+      - ../results/baselines/ncnn_conf_l2.json
+      - ../results/baselines/ncnn_conf_l2_kitti_limited.json
+      - ../results/baselines/pncnn.json
+      - ../results/baselines/pncnn_kitti_limited.json
+      - ../results/baselines/pncnn_exp.json
+      - ../results/baselines/pncnn_exp_kitti_limited.json
+      - ../experiments/baselines/ncnn/models/ncnn_conf_l1/model.pth
+      - ../experiments/baselines/ncnn/models/ncnn_conf_l2/model.pth
+      - ../experiments/baselines/ncnn/models/pncnn/model.pth
+      - ../experiments/baselines/ncnn/models/pncnn_exp/model.pth
+      - ../experiments/baselines/ncnn/models/ncnn_conf_l1_kitti_limited/model.pth
+      - ../experiments/baselines/ncnn/models/ncnn_conf_l2_kitti_limited/model.pth
+      - ../experiments/baselines/ncnn/models/pncnn_kitti_limited/model.pth
+      - ../experiments/baselines/ncnn/models/pncnn_exp_kitti_limited/model.pth
+    outs:
+      - ../results/report.ipynb:
+          cache: false

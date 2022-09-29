@@ -1,0 +1,5 @@
+outs:
+- md5: cf8ad612b8236be6dd21385f42c5cd7a.dir
+  size: 2772177
+  nfiles: 1000
+  path: test_1_masks

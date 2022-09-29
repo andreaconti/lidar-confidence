@@ -1,0 +1,37 @@
+name: lidar-confidence-test
+channels:
+    - pytorch
+    - conda-forge
+    - defaults
+dependencies:
+
+    # core
+    - python=3.8
+    - cudatoolkit=11.1
+    - pytorch=1.8.*
+    - torchvision=0.9.*
+    - pytorch-lightning=1.*
+    - scipy=1.*
+    - dvc=2.*
+    - dvc-gdrive
+    - pip
+
+    - pip:
+      - wandb >=0.10, <1.0
+      - matplotlib>=3.0, <4.0
+      - opencv-python
+      - cmapy >=0.6.0, <1.0
+      - papermill >=2.3.0
+      - jupyterlab
+
+      # development
+      - black
+      - isort
+      - pytest
+      - pre-commit
+      - mypy
+      - python-language-server
+      - pyls-black
+      - pyls-mypy
+      - pyflakes
+      - flake8

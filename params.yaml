@@ -1,0 +1,7 @@
+lce:
+  epochs: 3
+  batch_size: 2
+  lr: 0.00001
+  head: mlp
+  depth_supervision: min_pooling
+  loss_fn: l2+1

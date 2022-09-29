@@ -1,0 +1,142 @@
+schema: '2.0'
+stages:
+  baseline_ncnn@ncnn_conf_l1:
+    cmd: python experiments/baselines/ncnn/test.py ncnn_conf_l1 data/dataset results/baselines
+    deps:
+    - path: data/dataset
+      md5: 3a949ff51f2ca0683c6f2f0819c64a2c.dir
+      size: 3238622256
+      nfiles: 33586
+    - path: experiments/baselines/ncnn/models/ncnn_conf_l1/model.pth
+      md5: d00b97d431f0c528d1534653e32d19dc
+      size: 4111317
+    - path: experiments/baselines/ncnn/test.py
+      md5: 3816e009f48f52398fe3b54d25151341
+      size: 3265
+    outs:
+    - path: results/baselines/ncnn_conf_l1.json
+      md5: 1de89ae12398d6765583f0e3b46f64fc
+      size: 384
+  baseline_ncnn@ncnn_conf_l2:
+    cmd: python experiments/baselines/ncnn/test.py ncnn_conf_l2 data/dataset results/baselines
+    deps:
+    - path: data/dataset
+      md5: 3a949ff51f2ca0683c6f2f0819c64a2c.dir
+      size: 3238622256
+      nfiles: 33586
+    - path: experiments/baselines/ncnn/models/ncnn_conf_l2/model.pth
+      md5: 7e33c3015f30ff9279d226443ef51872
+      size: 4111317
+    - path: experiments/baselines/ncnn/test.py
+      md5: 3816e009f48f52398fe3b54d25151341
+      size: 3265
+    outs:
+    - path: results/baselines/ncnn_conf_l2.json
+      md5: 9a22935fe01fb70ce008740b5ca53921
+      size: 382
+  baseline_ncnn@pncnn:
+    cmd: python experiments/baselines/ncnn/test.py pncnn data/dataset results/baselines
+    deps:
+    - path: data/dataset
+      md5: 3a949ff51f2ca0683c6f2f0819c64a2c.dir
+      size: 3238622256
+      nfiles: 33586
+    - path: experiments/baselines/ncnn/models/pncnn/model.pth
+      md5: c6f98f83fbd242035a86d9f60f3620af
+      size: 8168351
+    - path: experiments/baselines/ncnn/test.py
+      md5: 3816e009f48f52398fe3b54d25151341
+      size: 3265
+    outs:
+    - path: results/baselines/pncnn.json
+      md5: 30e553d9a4ab4172805082dcbb2d34ca
+      size: 384
+  baseline_ncnn@pncnn_exp:
+    cmd: python experiments/baselines/ncnn/test.py pncnn_exp data/dataset results/baselines
+    deps:
+    - path: data/dataset
+      md5: 3a949ff51f2ca0683c6f2f0819c64a2c.dir
+      size: 3238622256
+      nfiles: 33586
+    - path: experiments/baselines/ncnn/models/pncnn_exp/model.pth
+      md5: b382e800f79db1bce2a1b0ff5ad638f6
+      size: 8168371
+    - path: experiments/baselines/ncnn/test.py
+      md5: 3816e009f48f52398fe3b54d25151341
+      size: 3265
+    outs:
+    - path: results/baselines/pncnn_exp.json
+      md5: e85d2c9bb523442539b6dad53d1887aa
+      size: 384
+  baseline_ncnn@ncnn_conf_l1_kitti_limited:
+    cmd: python experiments/baselines/ncnn/test.py ncnn_conf_l1_kitti_limited data/dataset
+      results/baselines
+    deps:
+    - path: data/dataset
+      md5: 3a949ff51f2ca0683c6f2f0819c64a2c.dir
+      size: 3238622256
+      nfiles: 33586
+    - path: experiments/baselines/ncnn/models/ncnn_conf_l1_kitti_limited/model.pth
+      md5: 150cde79cdfeabfccff66c2b73b449cc
+      size: 5483784
+    - path: experiments/baselines/ncnn/test.py
+      md5: 3816e009f48f52398fe3b54d25151341
+      size: 3265
+    outs:
+    - path: results/baselines/ncnn_conf_l1_kitti_limited.json
+      md5: cb659f2be6bd400841a4b3abee2da529
+      size: 383
+  baseline_ncnn@ncnn_conf_l2_kitti_limited:
+    cmd: python experiments/baselines/ncnn/test.py ncnn_conf_l2_kitti_limited data/dataset
+      results/baselines
+    deps:
+    - path: data/dataset
+      md5: 3a949ff51f2ca0683c6f2f0819c64a2c.dir
+      size: 3238622256
+      nfiles: 33586
+    - path: experiments/baselines/ncnn/models/ncnn_conf_l2_kitti_limited/model.pth
+      md5: ecc446a8c1eca4e5113a3345d9ce3e99
+      size: 5483784
+    - path: experiments/baselines/ncnn/test.py
+      md5: 3816e009f48f52398fe3b54d25151341
+      size: 3265
+    outs:
+    - path: results/baselines/ncnn_conf_l2_kitti_limited.json
+      md5: 4ea60a1a976f1755b864d19f892ea1b2
+      size: 384
+  baseline_ncnn@pncnn_kitti_limited:
+    cmd: python experiments/baselines/ncnn/test.py pncnn_kitti_limited data/dataset
+      results/baselines
+    deps:
+    - path: data/dataset
+      md5: 3a949ff51f2ca0683c6f2f0819c64a2c.dir
+      size: 3238622256
+      nfiles: 33586
+    - path: experiments/baselines/ncnn/models/pncnn_kitti_limited/model.pth
+      md5: 893373ed89653a169c598c9d73a6a041
+      size: 10932906
+    - path: experiments/baselines/ncnn/test.py
+      md5: 3816e009f48f52398fe3b54d25151341
+      size: 3265
+    outs:
+    - path: results/baselines/pncnn_kitti_limited.json
+      md5: 60f5f0fc388655f073aebbe9608ea009
+      size: 383
+  baseline_ncnn@pncnn_exp_kitti_limited:
+    cmd: python experiments/baselines/ncnn/test.py pncnn_exp_kitti_limited data/dataset
+      results/baselines
+    deps:
+    - path: data/dataset
+      md5: 3a949ff51f2ca0683c6f2f0819c64a2c.dir
+      size: 3238622256
+      nfiles: 33586
+    - path: experiments/baselines/ncnn/models/pncnn_exp_kitti_limited/model.pth
+      md5: 5749fa7e935baef8cc582ed3c47b81e6
+      size: 10932906
+    - path: experiments/baselines/ncnn/test.py
+      md5: 3816e009f48f52398fe3b54d25151341
+      size: 3265
+    outs:
+    - path: results/baselines/pncnn_exp_kitti_limited.json
+      md5: e88b5ed1ed065e8e3f30a57cba5bb529
+      size: 384

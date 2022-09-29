@@ -1,0 +1,24 @@
+stages:
+  baseline_ncnn:
+    foreach:
+      - ncnn_conf_l1
+      - ncnn_conf_l2
+      - pncnn
+      - pncnn_exp
+      - ncnn_conf_l1_kitti_limited
+      - ncnn_conf_l2_kitti_limited
+      - pncnn_kitti_limited
+      - pncnn_exp_kitti_limited
+    do:
+      desc: >-
+          Uncertainty-Aware CNNs for Depth Completion,
+          Uncertainty from Beginning to End baseline
+      wdir: ../..
+      cmd: python experiments/baselines/ncnn/test.py ${item} data/dataset results/baselines
+      deps:
+      - data/dataset
+      - experiments/baselines/ncnn/models/${item}/model.pth
+      - experiments/baselines/ncnn/test.py
+      metrics:
+      - results/baselines/${item}.json:
+          cache: false
