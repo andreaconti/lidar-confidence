@@ -1,15 +1,14 @@
 # [Unsupervised confidence for LiDAR depth maps and applications](https://arxiv.org/pdf/2210.03118.pdf)
 
-
 <p>
-<div style="text-align: center;">
+<div align="center">
     <a href="https://andreaconti.github.io">Andrea Conti</a>
     &middot;
     <a href="https://mattpoggi.github.io">Matteo Poggi</a>
     &middot;
     <a href="http://vision.deis.unibo.it/~smatt/Site/Home.html">Stefano Mattoccia</a>
 </div>
-<div style="text-align: center;">
+<div align="center">
     <a href="https://arxiv.org/pdf/2210.03118.pdf">[Arxiv]</a>
     <a href="https://github.com/andreaconti/lidar-confidence/blob/master/torchhub-example.ipynb">[Demo]</a>
 </div>
