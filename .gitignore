@@ -5,6 +5,7 @@ experiments/**/*.pth
 experiments/**/*.png
 
 *.code-workspace
+hubdownload
 
 .envrc
 
