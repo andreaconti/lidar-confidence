@@ -6,6 +6,8 @@
     &middot;
     <a href="https://mattpoggi.github.io">Matteo Poggi</a>
     &middot;
+    <a href="https://filippoaleotti.github.io/website">Filippo Aleotti</a>
+    &middot;
     <a href="http://vision.deis.unibo.it/~smatt/Site/Home.html">Stefano Mattoccia</a>
 </div>
 <div align="center">
